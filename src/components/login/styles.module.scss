@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/background.png");
+  background-size: cover;
+  background-position-x: center;
+  width: 100%;
+  height: 100vh;
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 1135px;
+    padding: 0 16px;
+
+    h1 {
+      color: var(--headingWhite);
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 40px;
+      margin-bottom: 48px;
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+    form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        padding: 8px 16px;
+
+        width: 100%;
+        max-width: 368px;
+        height: 60px;
+        border-radius: 4px;
+        background: rgba($color: #000000, $alpha: 0.32);
+
+        color: var(--headingWhite);
+
+        label {
+          line-height: 16px;
+        }
+
+        input {
+          background: transparent;
+          border: none;
+          color: var(--headingWhite);
+          font-size: 16px;
+          line-height: 24px;
+          outline: none;
+        }
+      }
+
+      .inputPassword {
+        flex-direction: row;
+        justify-content: space-between;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+
+        button {
+          background: var(--headingWhite);
+          border-radius: 44px;
+          padding: 8px 20px;
+          border: none;
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: bold;
+          color: var(--headingPinkButton);
+          max-height: 36px;
+
+          margin: auto 0;
+
+          cursor: pointer;
+
+          transition: 0.2s;
+
+          &:hover {
+            filter: brightness(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.tooltip {
+  position: absolute;
+
+  bottom: -72px;
+}

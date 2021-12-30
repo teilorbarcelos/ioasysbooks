@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --headingWhite: #fff;
+  --headingDark: #333;
+  --headingGray: #999;
+  --headingPinkTitle: #ab2680;
+  --headingPinkButton: #b22e6f;
+
+  --background: #e5e5e5;
+}
+
+body {
+  font: 16px "Heebo", Arial, sans-serif;
+  background: var(--background);
+  color: var(--headingDark);
+  font-weight: normal;
+  font-size: 12px;
+}
