@@ -1,25 +1,39 @@
 import styles from './styles.module.scss'
 
 interface BookProps {
+  id: string
   imageUrl: string
   title: string
   authors: string[]
   pageCount: number
   publisher: string
   published: number
+  setBookDetails: React.Dispatch<React.SetStateAction<string>>
+  setModalOpen: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 export function BookCard({
+  id,
   imageUrl,
   authors,
   pageCount,
   published,
   publisher,
-  title
+  title,
+  setBookDetails,
+  setModalOpen
 }: BookProps) {
 
+  async function handleOpenModalBook() {
+    setBookDetails(id)
+    setModalOpen(true)
+  }
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      onClick={handleOpenModalBook}
+    >
       <img
         src={imageUrl}
         alt={`Capa do livro: ${title}`}

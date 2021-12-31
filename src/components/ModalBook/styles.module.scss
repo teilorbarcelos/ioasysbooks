@@ -1,0 +1,133 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba($color: #000000, $alpha: 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  visibility: hidden;
+
+  .closeButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--headingWhite);
+    cursor: pointer;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    right: 16px;
+    top: 16px;
+  }
+
+  .bookInfoBox {
+    overflow-y: auto;
+    background: var(--headingWhite);
+    display: flex;
+    border-radius: 4px;
+    padding: 48px;
+    gap: 48px;
+
+    img {
+      width: 100%;
+      max-width: 350px;
+
+      box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.5);
+    }
+
+    .bookInfo {
+      h1 {
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 40px;
+      }
+
+      .authors {
+        font-size: 12px;
+        line-height: 20px;
+        color: var(--headingPinkTitle);
+      }
+
+      h2 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 28px;
+        margin-top: 32px;
+      }
+
+      .bookDetails {
+        margin-top: 12px;
+        margin-bottom: 32px;
+
+        div {
+          display: flex;
+          justify-content: space-between;
+
+          :first-child {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 30px;
+          }
+
+          :last-child {
+            color: var(--headingGray);
+            font-size: 12px;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 12px;
+      }
+
+      .description {
+        color: var(--headingGray);
+        font-size: 12px;
+        line-height: 20px;
+
+        p {
+          position: relative;
+          text-indent: 1.875rem;
+          max-width: 350px;
+
+          span {
+            position: absolute;
+            font: 700 48px serif;
+            top: -0.7rem;
+            left: -1.7rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 0 16px;
+    padding-top: 64px;
+
+    .bookInfoBox {
+      flex-direction: column;
+      padding: 24px;
+      gap: 24px;
+
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+}
