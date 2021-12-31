@@ -17,3 +17,5 @@ Para rodar esse projeto você vai precisar apenas clonar ele para o seu computad
 ```yarn``` e, após instalar todas as dependências, ```yarn start```.
 
 Após esse procedimento o seu ambiente de desenvolvimento deve estar pronto e o app deve abrir automaticamente no seu navegador de internet, espero que goste assim como eu gostei de desenvolver este app. :tada:
+
+Ps.: Usuário de Teste: desafio@ioasys.com.br senha: 12341234
