@@ -1,46 +1,19 @@
-# Getting Started with Create React App
+![Printscreen of the project](/.github/screenshot.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Ioasys-Books
 
-## Available Scripts
+Este projeto foi desenvolvido como desafio para uma vaga de emprego, foi solicitado que eu fizesse uma aplicação responsiva com base em um laout pronto no figma consumindo uma api própria da empresa com uma lista fake de livros.
 
-In the project directory, you can run:
+Então, aí está, as técnologias usadas foram:
 
-### `yarn start`
+* React 17.0.2
+* axios 0.24.0 (para fazer as requisições na API)
+* node-sass 7.0.0 (para processar o scss do desenvolvimento)
+* sass-loader 12.4.0 (para carregar o scss do projeto)
+* style-loader 3.3.1 (para auxiliar no desenvolvimento scss)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para rodar esse projeto você vai precisar apenas clonar ele para o seu computador, rodar os comandos básicos do react na raiz do projeto para criar o ambiente de desenvolvimento, você irá precisar do npm ou yarn instalado no seu computador para isso, os comandos são:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```yarn``` e, após instalar todas as dependências, ```yarn start```.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Após esse procedimento o seu ambiente de desenvolvimento deve estar pronto e o app deve abrir automaticamente no seu navegador de internet, espero que goste assim como eu gostei de desenvolver este app. :tada:
