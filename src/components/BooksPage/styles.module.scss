@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 88px;
 
   header {
     display: flex;
@@ -43,5 +44,22 @@
     @media screen and (max-width: 768px) {
       padding: 0 16px;
     }
+  }
+
+  .booksList {
+    width: 100%;
+    max-width: 1130px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 400px) {
+      padding: 0 16px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-bottom: 16px;
   }
 }
