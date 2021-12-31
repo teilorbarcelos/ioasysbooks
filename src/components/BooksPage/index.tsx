@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useAuth } from "../../hooks/useAuth"
 import { api } from "../../services/api"
 import { BookCard } from "../BookCard"
+import { ModalBook } from "../ModalBook"
 import { Pagination } from "../Pagination"
 
 import styles from './styles.module.scss'
@@ -26,6 +27,8 @@ export function BooksPage() {
   const [page, setPage] = useState(1)
   const [books, setBooks] = useState<BookProps[]>([])
   const [totalPages, setTotalPages] = useState(0)
+  const [bookDetails, setBookDetails] = useState('')
+  const [modalOpen, setModalOpen] = useState(false)
 
   async function getBooksList() {
     try {
@@ -45,46 +48,57 @@ export function BooksPage() {
   }, [page])
 
   return (
-    <main className={styles.container}>
-      <header>
-        <h1>ioasys <span>Books</span></h1>
+    <>
+      <main className={styles.container}>
+        <header>
+          <h1>ioasys <span>Books</span></h1>
 
-        <div className={styles.loggedUser}>
-          <p className={styles.userWelcome}>Bem vind{user?.gender === 'M' ? 'o' : 'a'}, {user?.name}!</p>
+          <div className={styles.loggedUser}>
+            <p className={styles.userWelcome}>Bem vind{user?.gender === 'M' ? 'o' : 'a'}, {user?.name}!</p>
 
-          <img
-            src="/logoutButton.svg"
-            onClick={logOut}
-            alt="Botão de logout"
-            title="Sair"
-          />
-        </div>
-      </header>
+            <img
+              src="/logoutButton.svg"
+              onClick={logOut}
+              alt="Botão de logout"
+              title="Sair"
+            />
+          </div>
+        </header>
 
-      <section className={styles.booksList}>
-        {
-          books.length > 0 ?
-            books.map(book => (
-              <BookCard
-                key={book.id}
-                imageUrl={book.imageUrl}
-                authors={book.authors}
-                pageCount={book.pageCount}
-                published={book.published}
-                publisher={book.publisher}
-                title={book.title}
-              />
-            ))
-            :
-            <h1>Nenhum livro nesta lista.</h1>
-        }
-      </section>
+        <section className={styles.booksList}>
+          {
+            books.length > 0 ?
+              books.map(book => (
+                <BookCard
+                  key={book.id}
+                  id={book.id}
+                  imageUrl={book.imageUrl}
+                  authors={book.authors}
+                  pageCount={book.pageCount}
+                  published={book.published}
+                  publisher={book.publisher}
+                  title={book.title}
+                  setBookDetails={setBookDetails}
+                  setModalOpen={setModalOpen}
+                />
+              ))
+              :
+              <h1>Nenhum livro nesta lista.</h1>
+          }
+        </section>
 
-      <Pagination
-        page={page}
-        totalPages={totalPages}
-        setPage={setPage}
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          setPage={setPage}
+        />
+      </main>
+
+      <ModalBook
+        modalOpen={modalOpen}
+        id={bookDetails}
+        setModalOpen={setModalOpen}
       />
-    </main>
+    </>
   )
 }
