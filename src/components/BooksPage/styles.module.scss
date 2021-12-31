@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 88px;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1130px;
+    height: 40px;
+    margin: 40px 0;
+
+    h1 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 40px;
+
+      span {
+        font-weight: 300;
+        font-size: 28px;
+      }
+    }
+
+    .loggedUser {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .userWelcome {
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
+
+  .booksList {
+    width: 100%;
+    max-width: 1130px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 400px) {
+      padding: 0 16px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    padding-bottom: 16px;
+  }
+}

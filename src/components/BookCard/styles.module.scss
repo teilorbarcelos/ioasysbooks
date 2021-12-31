@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 160px;
+  padding: 0 16px;
+  gap: 16px;
+  background: var(--headingWhite);
+  border-radius: 4px;
+
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
+
+  img {
+    max-width: 81px;
+  }
+
+  .bookInfo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 19px 0;
+
+    justify-content: space-between;
+
+    .header {
+      h1 {
+        font-weight: 500;
+        font-size: 14;
+        line-height: 20px;
+      }
+
+      h2 {
+        font-size: 12px;
+        color: var(--headingPinkTitle);
+      }
+    }
+
+    .moreInfo {
+      p {
+        font-size: 12px;
+        color: var(--headingGray);
+        line-height: 20px;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
+  }
+
+  @media screen and (max-width: 400px) {
+    height: unset;
+    padding: 16px;
+  }
+}
