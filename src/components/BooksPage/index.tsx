@@ -54,7 +54,9 @@ export function BooksPage() {
           <h1>ioasys <span>Books</span></h1>
 
           <div className={styles.loggedUser}>
-            <p className={styles.userWelcome}>Bem vind{user?.gender === 'M' ? 'o' : 'a'}, {user?.name}!</p>
+            <p
+              className={styles.userWelcome}
+            >Bem vind{user?.gender === 'M' ? 'o' : 'a'}, {user?.name}!</p>
 
             <img
               src="/logoutButton.svg"
